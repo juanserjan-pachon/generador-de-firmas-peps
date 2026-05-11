@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Firmas de Correo</title>
+        <!-- ESTE ES EL NUEVO Y MEJORADO ENLACE DE GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Kumbh+Sans:wght,YOPQ@100..900,40..300&family=Sofia+Sans:wght@1..1000&display=swap" rel="stylesheet">
+
+    <!-- Enlazamos nuestra hoja de estilos externa -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Envolvemos todo en un contenedor -->
+    <div class="container">
+        <h1>Generador de Firmas de Email</h1>
+        
+        <!-- Firma única: PEPS -->
+        <div class="tabs">
+            <button class="tab-button active" data-template="template_PEPS.png">PEPS</button>
+        </div>
+        
+        <!-- Formulario -->
+        <form id="signature-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ej: Juan">
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" placeholder="Ej: Pérez">
+            
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" placeholder="Ej: Gerente de Ventas">
+            
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" placeholder="Ej: juan@empresa.com">
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" placeholder="Ej: +595 21 123-456">
+            
+            <div id="field-direccion">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" placeholder="Ej: Asunción, Paraguay">
+            </div>
+        </form>
+        
+        <!-- Área de vista previa con Canvas -->
+        <div class="preview-area">
+            <h2>Vista Previa</h2>
+            <!-- Este es nuestro lienzo para dibujar la firma -->
+           <!-- <canvas id="signature-canvas" width="2917" height="959"></canvas> -->
+             <canvas id="signature-canvas" ></canvas>
+
+        </div>
+        
+        <!-- Botón de descarga -->
+        <button id="download-btn" class="download-btn">📥 Descargar PNG</button>
+    </div>
+
+    <!-- Enlazamos nuestro futuro archivo JavaScript -->
+    <script src="js/main.js" type="module" defer></script>
+</body>
+</html>
